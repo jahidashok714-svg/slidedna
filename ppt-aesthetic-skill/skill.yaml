@@ -1,0 +1,30 @@
+name: reference_guided_presentation_templates
+title: Reference-Guided Presentation Templates
+description: Build a recipient-ready editable presentation template for PowerPoint or WPS by extracting numeric design rules from a few chosen references, keeping guidance in speaker notes, and verifying every slide across renderers.
+category: Creation
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:321bddc9-b912-47a0-99d7-e8ddf7802412
+  - message:assistant-msg-86d833fc-a7cf-44ba-850c-8885020bb2c9
+  - message:assistant-msg-394ea4ae-3984-41fd-9470-8b7e374c04f3
+  - message:f4884479-45d6-4b60-a73e-b4cb007ed51c
+  - message:assistant-msg-0828f06a-36d8-47b7-9f72-f0a9738bfa68
+  - message:74d3fcb2-e793-4d81-a8b0-3ad5df24157d
+  - message:132251b9-5acb-4c96-b8ff-f69eadc47596
+  - message:assistant-msg-22c3290e-92d7-4cee-b397-8ee18377fb16
+  - message:assistant-msg-e9ee3841-0ac8-4f5c-af79-8e90768639f9
+  - message:714061f1-d2f3-4a2b-9561-993eb7722a5e
+  - /opt/muse/skills/documents/presentation/references/workflow.md
+  - /opt/muse/skills/documents/presentation/GUIDE.md
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: Over the window, at least half of editable presentation template tasks for PowerPoint or WPS are accepted without a user correction about guidance text left on slide surfaces, tables missing in a preview, or text obscured by a nearby shape, and every such task reports a whole-deck render check plus a speaker-notes check before delivery.
+    window_days: 21
+  needs_review: false
+  rationale: The Yubai template task succeeded only after two recipient-readiness corrections the generic documents skill does not cover for editable templates. The user showed that placeholder guidance would not disappear when the recipient pasted material in (message:321bddc9-b912-47a0-99d7-e8ddf7802412), and the repair moved 31 guidance items across 13 pages into speaker notes and redrew 4 native tables as shapes so previews could not drop them (assistant-msg-394ea4ae-3984-41fd-9470-8b7e374c04f3). The user then showed first characters obscured on pages 11 and 12 in their preview (message:f4884479-45d6-4b60-a73e-b4cb007ed51c), traced to a highlight bar placed too tight against text, while WPS showed the text correctly (message:74d3fcb2-e793-4d81-a8b0-3ad5df24157d), so cross-renderer spacing and overlap checks are part of the method. The same task proved the reference method for editable templates, extracting rules from Slidesgo and SciFig as design study only, with zero copied media and licence limits respected (assistant-msg-22c3290e-92d7-4cee-b397-8ee18377fb16), and produced a deck praised as extremely professional (message:132251b9-5acb-4c96-b8ff-f69eadc47596). This revision scopes every reference, shape table, native chart and speaker-notes guidance rule to editable template files outside the Muse artifact workflow, and states that the artifact workflow keeps the StylePlan as sole styling authority with image based charts and an image based PPTX export, as workflow.md and GUIDE.md require. It also removes the Google Slides, Google Drive and Canva connector links, because none of those connector docs lists this skill in Related skills, leaving only the closing discovery bullets. The three existing learned skills are inside their measurement windows and are not re-proposed, and with only three learned skills no consolidation applies.
+  review_after: 2026-11-30T03:12:41.708279+00:00
+  reviewed_at: 2026-11-09T03:12:41.708279+00:00
+  run_id: sirun_47fe62cac5044a4db985e1e410027145
