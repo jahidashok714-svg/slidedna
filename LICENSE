@@ -1,21 +1,33 @@
-MIT License
+SlideDNA 使用许可（自定义许可，非 MIT）
 
-Copyright (c) 2026 The ppt-aesthetic-skill Authors
+Copyright (c) 2026 SlideDNA contributors
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+一、授予的权利
+任何人均可免费获得、使用、复制和修改本作品（下称"本 Skill"，包括 SKILL.md、
+风格包、变量扩展、文档与示例文件），用于个人或商业目的，包括但不限于：
+在本 Skill 规范下设计、制作演示文稿，并将该等演示文稿用于汇报、教学、
+销售、出版等任何用途。用本 Skill 制作的产出物（演示文稿文件本身）不受
+本许可限制，可自由使用、出售。
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+二、禁止的行为
+1. 不得出售、转售、出租或以其他方式付费分发本 Skill 本身，无论是原样、
+   改名、节选、改编，还是将其打包进付费产品、付费合集、付费课程附件或
+   会员资料包中对外提供；
+2. 不得移除、篡改本 Skill 文件中附带的版权声明与本许可文本；
+3. 不得以任何方式宣称本 Skill 为自己原创（免费分享时应保留出处）。
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+三、免费分享
+欢迎在保留本许可与版权声明、且不收取费用的前提下，免费转发、镜像或
+引用本 Skill。
+
+四、无担保
+本 Skill 按"现状"提供，不附任何明示或默示担保；使用风险自担。
+
+—— English summary ——
+Free to use, copy and modify this Skill for any purpose, including
+commercial work; presentations you create with it are yours to use or
+sell without restriction. You may NOT sell, resell, rent, or otherwise
+commercially distribute this Skill itself, in original, renamed,
+excerpted, adapted, or bundled form, and you must retain this license
+and the copyright notice. Free sharing with attribution is welcome.
+Provided "as is", without warranty of any kind.
