@@ -1,78 +1,20 @@
-# Reference-Guided Presentation Templates
+# SlideDNA · PPT 审美 Skill（Reference-Guided Presentation Templates）
 
-## Choose the right build route
+一套「参照拆解式」的演示文稿设计规范：给支持 skill 的 AI agent 使用，由 agent 按数值规范逐页逐形状**原创构建**出原生可编辑的 .pptx 文件（每个标题、正文、图表都是 PowerPoint / WPS 里真实的形状与文本框，拿到就能改）。
 
-- Apply this skill only when the deliverable is an editable presentation template file that a recipient will open, edit and forward in PowerPoint or WPS.
+## 工作方法
 
-- Follow the Documents presentation workflow instead when the task asks for a Muse presentation artifact or a deck built from per slide source files.
+1. **先定场景，再选风格包**：一个 deck 只用一个风格包，包内分支同样二选一，不混搭。
+2. **数值即图纸**：色值、字号梯度、间距、构图比例全部写死在风格包里，构建时照数执行，不临场发挥。每个风格包的参数都从 2–4 套该场景的顶级参照里逐形状实测提炼：多套共识留下，单套怪癖舍弃。
+3. **原创构建**：从空白页起逐形状搭建；表格用形状拼建（轻量预览不会丢），图表保持原生可编辑；领域内容按该领域的公开标准构建，推断性的框架选择要标注为可替换的假设。
+4. **页面只放成品**：使用说明一律写进每页的演讲者备注，页面上只留成品内容与填写空白；编造的示例数字必须在数据本身就地标注（如「示例」），提醒使用者替换。
+5. **逐页验收**：交付前把每一页渲染成图逐页目检，做文字与不透明形状的几何重叠扫描，再用轻量预览复核一遍表格与首字显示；哪种渲染检查没做成，要如实说明，不凭单次渲染就宣称定稿。
 
-- Under that artifact workflow, treat the StylePlan compiled by `/opt/hatch/bin/hatch-slide-style` as the sole styling authority and apply it verbatim without re-picking colours or fonts from references.
+## 通用纪律
 
-- Under that artifact workflow, build charts as palette coloured matplotlib images and export the PPTX from validated slide images, with no editable text or shapes and each slide title in its speaker notes as accessibility text.
-
-- Apply reference extraction, shape built tables, native editable charts and guidance in speaker notes only to editable template files built outside that artifact workflow.
-
-- Start a simple ready-made editable template from the direction the recipient gave, such as their topic, tools and audience, and fill the rest with standard structure they can edit themselves.
-
-- Do not turn a ready-made template request into a parameter level interrogation about model variants, counts or settings the recipient can change in the finished file.
-
-- Build domain content from public standards for that field when no template contains it, and mark any inferred framework choice as an assumption the recipient can remove or replace.
-
-- Keep every number you invent as an example clearly labelled on the data itself, and tell the recipient in the handover that example numbers must be replaced before use.
-
-## Extract design rules from references
-
-- For an editable template outside the artifact workflow, choose two to three strong references for one style and stop there, because more references average different styles together instead of improving the result.
-
-- For that editable template route, extract numeric rules from the references before building, covering exact colours, colour discipline, type sizes, spacing, corner radius, line weight and shadow use.
-
-- Turn the references into page recipes for covers, section pages, text and image pages, data pages and closing pages, and keep the recipes consistent across the editable template.
-
-- Keep rules that several references share and discard quirks that only one reference has.
-
-- Check the licence terms of any downloaded reference before using it, and treat a reference as design study only when its licence does not cover removing attribution or transferring the editable file to someone else.
-
-- Verify that no reference assets entered the finished template by comparing media in both files and scanning the finished text for the reference brand names.
-
-## Build a clean recipient-ready template
-
-- Put only finished content and direct fill-in blanks on slide surfaces, such as a title, a chart, a conclusion line or an empty name field.
-
-- For an editable template only, move every instruction about how to use a slide into that slide speaker notes, so the recipient can read guidance without deleting text from the slides.
-
-- Keep a warning label attached to example data itself even after moving guidance to notes, because removing that label could let the recipient present invented numbers as real results.
-
-- For an editable template only, build tables as editable shapes when the file will be opened in chat previews or lightweight viewers that can drop native table objects, and keep charts native so their data stays editable by the recipient.
-
-- Leave a safe margin between text and any opaque shape beside it, and move highlight bars outside the text area instead of placing them tight against the first characters.
-
-## Verify every slide before delivery
-
-- Render every slide and inspect the render, rather than checking only the cover and a sample page.
-
-- Run a geometric check for text boxes overlapping opaque shapes across the whole deck and fix every overlap before delivery.
-
-- Scan slide surfaces for guidance words the recipient would have to delete, and confirm that guidance lives in speaker notes instead.
-
-- Check tables, charts and placeholder frames in a lightweight preview as well as in the main editor, because a table or a first character can survive one renderer and fail in another.
-
-- Tell the recipient to open the file in PowerPoint or WPS and warn them that a chat quick preview can drop tables or clip text even when the file is correct.
-
-- Report which renderer checks passed and which could not be checked, instead of calling the deck final from one render alone.
-
-## Available connectors
-
-- Use `muse.connector_search` to find other connectors and `muse.skill_search` to find related skills.
-
-- If nothing here fits, look on the web for a maintained API or MCP server and set it up with [Custom Connectors and MCPs](/opt/muse/skills/custom-connector-setup/SKILL.md), or build a custom connector.
-
-## Websites
-
-- [Microsoft 365](https://www.microsoft365.com/) for checking a PowerPoint file in its native editor when comments, fonts or layout must survive exactly. Carry the exact file name into `browser.browse` and verify the saved result there.
-
-## Alternatives for better results
-
-- Ask the recipient to check the editable template in their own editor before forwarding it, when a preview disagreement cannot be settled from renders alone.
+- 对方只要一份现成模板时，按对方给的方向（主题、工具、受众）直接配标准结构做成成品，不要就对方能在成品里自改的参数逐项盘问。
+- 简单需求保持通用、拿来即用；复杂的按风格包与变量扩展的规范执行。
+- 构建中沉淀出可复用的新做法（新大类的招牌页、新页型），按变量文件的既有体例补写回去，让规范继续生长。
 
 ## Style packs on file
 
@@ -100,12 +42,9 @@ Selection rule: 接活先定场景 → 选对应风格包 → 按包内规范（
 
 覆盖合计 33 个大类。大类不在目录内时：只用风格包构建，并在交付说明里注明该大类暂无专属配方；若这次构建沉淀出了可复用的招牌页做法，按既有各节的体例补写进对应变量文件，让目录继续生长。
 
-## Commercial use guardrails
+## 使用与商用守则
 
-The user intends output from this skill for commercial use (confirmed 2026-11-09). Hold these lines on every build:
-
-- Build originals from the style-pack specifications only. Never ship, embed or transfer a reference deck itself, its pages, images, icons, illustrations or slide layouts copied 1:1 — specifications (colours, type scale, recipes, discipline) are the asset, reference files are study material only and stay in the project archive.
-- Before delivering a commercial deck, verify zero reference contamination the same way as the academic deck check: compare embedded media against every reference used (hash overlap must be zero) and scan slide text for reference brand names.
-- Fonts for commercial decks: prefer open-licensed families (OFL/Apache, e.g. the Google Fonts used across the packs, or Source Han / Noto for CJK). Treat Microsoft YaHei as system rendering only — fine to name it in a deck the client opens on their own Office install, never embed or redistribute the font file.
-- Formal pack, red branch: party emblem and other state symbols are regulated in China — never lift emblem or photo assets （长城/天安门 imagery) from reference templates for a commercial deck; symbolic assets must come from the client's own official materials.
-- Reference provenance to remember when a pack is chosen for a paid job: the formal pack's parameters were measured from decks licensed for study use only, and the SlidesMania-derived parameters carry a no-redistribution rule for the templates themselves — both are satisfied by building fresh decks from the abstracted specifications, and both forbid shipping anything derived from the reference files directly.
+- **只按规范原创构建**。本 skill 的资产是抽象出的设计规范（色值、字阶、页型配方、用色纪律）；用到的参照模板只作设计研究，其文件本身、页面、图片、图标与版式永不进入成品，也不随成品分发。
+- **交付前做零污染核查**：成品内嵌媒体与所用参照逐一比对哈希，重合必须为零；全文扫描参照的品牌字样，确认没有残留。
+- **字体**：优先使用开源授权字体（OFL / Apache，如思源 / Noto 系列）；微软雅黑等系统字体只按名引用、由使用者本机 Office / WPS 渲染，不嵌入、不分发字体文件。
+- **正式包红分支**：党徽、国徽等象征素材受法规约束，只能使用委托方官方提供的材料，不自制、不仿制，也不从参照模板或网络图片中提取替代。
